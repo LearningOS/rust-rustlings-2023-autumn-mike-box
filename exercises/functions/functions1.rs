@@ -5,6 +5,11 @@
 
 // I AM NOT DONE
 
+
 fn main() {
     call_me();
+}
+
+fn call_me() -> i32 {
+    return 0;
 }
