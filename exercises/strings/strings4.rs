@@ -17,9 +17,9 @@ fn string(arg: String) {
 }
 
 fn main() {
-    ???("blue");
-    ???("red".to_string());
-    ???(String::from("hi"));
+    string("blue");
+    string("red".to_string());
+    string_slice(String::from("hi"));
     ???("rust is fun!".to_owned());
     ???("nice weather".into());
     ???(format!("Interpolation {}", "Station"));
