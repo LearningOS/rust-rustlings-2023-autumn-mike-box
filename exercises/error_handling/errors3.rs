@@ -16,6 +16,7 @@ fn main() {
     let pretend_user_input = "8";
 
     let cost = total_cost(pretend_user_input)?;
+    match cost 
     Ok(cost);
     if cost > tokens {
         println!("You can't afford that many!");
@@ -25,10 +26,11 @@ fn main() {
     }
 }
 
-pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
+pub fn total_cost(item_quantity: &str) -> Result<(), Result<i32, ParseIntError>> {
     let processing_fee = 1;
     let cost_per_item = 5;
     let qty = item_quantity.parse::<i32>()?;
+    Ok(())
     match qty {
         Ok(x) => Ok(x * cost_per_item + processing_fee),
         Err(e) => Err(e),
